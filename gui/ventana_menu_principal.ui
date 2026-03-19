@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu_principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ============================================================
+   HOJA DE ESTILOS QSS — Estilo Profesional Minimalista
+   Clases: QMainWindow, QMenuBar, QMenu, QAction
+   Tipografía: 18pt | Paleta: Tonos claros y neutros
+   ============================================================ */
+
+
+/* ── VENTANA PRINCIPAL ─────────────────────────────────────── */
+
+QMainWindow {
+    background-color: #F5F5F0;
+    color: #1A1A1A;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 18pt;
+}
+
+QMainWindow::separator {
+    background-color: #DDDDD8;
+    width: 1px;
+    height: 1px;
+}
+
+QMainWindow::separator:hover {
+    background-color: #B0AFA8;
+}
+
+
+/* ── BARRA DE MENÚ ─────────────────────────────────────────── */
+
+QMenuBar {
+    background-color: #FFFFFF;
+    color: #2C2C2C;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    border-bottom: 1px solid #E0E0DA;
+    padding: 4px 8px;
+    spacing: 2px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    color: #2C2C2C;
+    padding: 8px 18px;
+    border-radius: 4px;
+    margin: 2px 1px;
+}
+
+QMenuBar::item:selected {
+    background-color: #EFEFEA;
+    color: #111111;
+}
+
+QMenuBar::item:pressed {
+    background-color: #E4E4DE;
+    color: #111111;
+}
+
+
+/* ── MENÚ DESPLEGABLE ──────────────────────────────────────── */
+
+QMenu {
+    background-color: #FFFFFF;
+    color: #2C2C2C;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    border: 1px solid #E0E0DA;
+    border-radius: 6px;
+    padding: 6px 0px;
+}
+
+QMenu::item {
+    background-color: transparent;
+    color: #2C2C2C;
+    padding: 10px 40px 10px 24px;
+    margin: 1px 4px;
+    border-radius: 4px;
+    min-width: 180px;
+}
+
+QMenu::item:selected {
+    background-color: #F0F0EA;
+    color: #111111;
+}
+
+QMenu::item:pressed {
+    background-color: #E4E4DE;
+    color: #111111;
+}
+
+QMenu::item:disabled {
+    color: #ABABAB;
+    background-color: transparent;
+}
+
+/* Separadores del menú */
+QMenu::separator {
+    height: 1px;
+    background-color: #E8E8E3;
+    margin: 5px 12px;
+}
+
+/* Indicador de submenú (flecha) */
+QMenu::right-arrow {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    image: none;
+    border-left: 2px solid #888888;
+    border-bottom: 2px solid #888888;
+}
+
+/* Indicador de ítem con checkbox o ícono */
+QMenu::indicator {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+}
+
+QMenu::indicator:non-exclusive:unchecked {
+    border: 1.5px solid #BBBBBB;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+QMenu::indicator:non-exclusive:checked {
+    border: 1.5px solid #5A8A6A;
+    border-radius: 3px;
+    background-color: #5A8A6A;
+}
+
+QMenu::indicator:exclusive:unchecked {
+    border: 1.5px solid #BBBBBB;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QMenu::indicator:exclusive:checked {
+    border: 1.5px solid #5A8A6A;
+    border-radius: 8px;
+    background-color: #5A8A6A;
+}
+
+
+/* ── BARRA DE ESTADO ───────────────────────────────────────── */
+
+QStatusBar {
+    background-color: #F0F0EA;
+    color: #666660;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 15pt;
+    border-top: 1px solid #E0E0DA;
+    padding: 2px 12px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+
+/* ── BARRA DE HERRAMIENTAS (opcional) ──────────────────────── */
+
+QToolBar {
+    background-color: #FAFAF7;
+    border-bottom: 1px solid #E4E4DE;
+    padding: 4px;
+    spacing: 4px;
+    font-size: 18pt;
+}
+
+QToolBar::separator {
+    background-color: #DDDDD8;
+    width: 1px;
+    margin: 4px 6px;
+}
+
+QToolButton {
+    background-color: transparent;
+    color: #2C2C2C;
+    font-size: 18pt;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+QToolButton:hover {
+    background-color: #EFEFEA;
+    border: 1px solid #DDDDD8;
+}
+
+QToolButton:pressed {
+    background-color: #E4E4DE;
+    border: 1px solid #CCCCCA;
+}
+
+
+/* ── TOOLTIP ───────────────────────────────────────────────── */
+
+QToolTip {
+    background-color: #2C2C2C;
+    color: #F5F5F0;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 15pt;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    opacity: 230;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProyectos">
+    <property name="title">
+     <string>Proyectos</string>
+    </property>
+    <widget class="QMenu" name="menuSegundo_parcial">
+     <property name="title">
+      <string>Segundo parcial</string>
+     </property>
+     <addaction name="actionRegresi_n_lineal"/>
+     <addaction name="actionIntegraci_n_num_rica"/>
+    </widget>
+    <addaction name="menuSegundo_parcial"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuProyectos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRegresi_n_lineal">
+   <property name="text">
+    <string>Regresión lineal</string>
+   </property>
+  </action>
+  <action name="actionIntegraci_n_num_rica">
+   <property name="text">
+    <string>Integración numérica</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
