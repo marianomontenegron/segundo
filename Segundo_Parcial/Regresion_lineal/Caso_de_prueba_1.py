@@ -1,6 +1,6 @@
 import numpy as np
 
-class CasoPrueba1(object):
+class CasoPrueba1():
 
     def __init__(self):
         self.x = 0
